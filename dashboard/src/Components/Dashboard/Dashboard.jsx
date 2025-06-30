@@ -69,29 +69,29 @@ function Dashboard() {
 
   return (
     <div className="dashboard">
-      <div className="dashboard-container">
+      <div className="dashboardContainer">
         
         <ChartsContainer />
 
         {/* BGR Section */}
-        <div className="bgr-section">
-          <div className="bgr-header">
-            <div className="bgr-title-row">
-              <h2 className="bgr-title">BGR</h2>
-              <button className="search-button">Search</button>
+        <div className="bgrSection">
+          <div className="bgrHeader">
+            <div className="bgrTitleRow">
+              <h2 className="bgrTitle">BGR</h2>
+              <button className="searchButton">Search</button>
             </div>
           </div>
-          <div className="bgr-content">
-            <div className="bgr-grid">
+          <div className="bgrContent">
+            <div className="bgrGrid">
               {bgrCategories.map((category, index) => (
-                <div key={index} className="bgr-category">
-                  <div className="category-label">
+                <div key={index} className="bgrCategory">
+                  <div className="categoryLabel">
                     {category.name}
                   </div>
-                  <div className={`category-score ${category.status}`}>
+                  <div className={`categoryScore ${category.status}`}>
                     {category.score}
                   </div>
-                  <div className={`status-indicator ${category.status}`}></div>
+                  <div className={`statusIndicator ${category.status}`}></div>
                 </div>
               ))}
             </div>
@@ -99,19 +99,19 @@ function Dashboard() {
         </div>
 
         {/* SKUs Section */}
-        <div className="skus-section">
-          <div className="skus-header">
-            <div className="skus-title-row">
-              <h2 className="skus-title">SKUs</h2>
-              <div className="skus-actions">
-                <button className="action-button">Search</button>
-                <button className="action-button">Action</button>
+        <div className="skusSection">
+          <div className="skusHeader">
+            <div className="skusTitleRow">
+              <h2 className="skusTitle">SKUs</h2>
+              <div className="skusActions">
+                <button className="actionButton">Search</button>
+                <button className="actionButton">Action</button>
               </div>
             </div>
           </div>
-          <div className="table-container">
-            <table className="data-table">
-              <thead className="table-header">
+          <div className="tableContainer">
+            <table className="dataTable">
+              <thead className="tableHeader">
                 <tr>
                   <th>SKU Name</th>
                   <th>Content Score</th>
@@ -124,69 +124,69 @@ function Dashboard() {
                   <th>Actions</th>
                 </tr>
               </thead>
-              <tbody className="table-body">
+              <tbody className="tableBody">
                 {skuData.map((sku, index) => (
-                  <tr key={index} className="table-row">
-                    <td className="table-cell">
-                      <div className="cell-content">
-                        <div className="cell-text">
+                  <tr key={index} className="tableRow">
+                    <td className="tableCell">
+                      <div className="cellContent">
+                        <div className="cellText">
                           {sku.name}
                         </div>
                       </div>
                     </td>
-                    <td className="table-cell">
-                      <div className="cell-content">
-                        <span className={`cell-text ${sku.status.content}`}>
+                    <td className="tableCell">
+                      <div className="cellContent">
+                        <span className={`cellText ${sku.status.content}`}>
                           {sku.contentScore}
                         </span>
-                        <div className={`status-dot ${sku.status.content}`}></div>
+                        <div className={`statusDot ${sku.status.content}`}></div>
                       </div>
                     </td>
-                    <td className="table-cell">
-                      <div className="cell-content">
-                        <span className={`cell-text ${sku.status.title}`}>
+                    <td className="tableCell">
+                      <div className="cellContent">
+                        <span className={`cellText ${sku.status.title}`}>
                           {sku.titleCoverage}
                         </span>
-                        <div className={`status-dot ${sku.status.title}`}></div>
+                        <div className={`statusDot ${sku.status.title}`}></div>
                       </div>
                     </td>
-                    <td className="table-cell">
-                      <div className="cell-content">
-                        <span className={`cell-text ${sku.status.images}`}>
+                    <td className="tableCell">
+                      <div className="cellContent">
+                        <span className={`cellText ${sku.status.images}`}>
                           {sku.images}
                         </span>
-                        <div className={`status-dot ${sku.status.images}`}></div>
+                        <div className={`statusDot ${sku.status.images}`}></div>
                       </div>
                     </td>
-                    <td className="table-cell">
-                      <div className="cell-content">
-                        <span className={`cell-text ${sku.status.bullet}`}>
+                    <td className="tableCell">
+                      <div className="cellContent">
+                        <span className={`cellText ${sku.status.bullet}`}>
                           {sku.bulletPoints}
                         </span>
-                        <div className={`status-dot ${sku.status.bullet}`}></div>
+                        <div className={`statusDot ${sku.status.bullet}`}></div>
                       </div>
                     </td>
-                    <td className="table-cell">
-                      <div className="cell-content">
-                        <span className={`cell-text ${sku.status.desc}`}>
+                    <td className="tableCell">
+                      <div className="cellContent">
+                        <span className={`cellText ${sku.status.desc}`}>
                           {sku.description}
                         </span>
-                        <div className={`status-dot ${sku.status.desc}`}></div>
+                        <div className={`statusDot ${sku.status.desc}`}></div>
                       </div>
                     </td>
-                    <td className="table-cell">
-                      <span className="cell-text muted">{sku.aPlus}</span>
+                    <td className="tableCell">
+                      <span className="cellText muted">{sku.aPlus}</span>
                     </td>
-                    <td className="table-cell">
-                      <div className="cell-content">
-                        <span className={`cell-text ${sku.status.reviews}`}>
+                    <td className="tableCell">
+                      <div className="cellContent">
+                        <span className={`cellText ${sku.status.reviews}`}>
                           {sku.reviews}
                         </span>
-                        <div className={`status-dot ${sku.status.reviews}`}></div>
+                        <div className={`statusDot ${sku.status.reviews}`}></div>
                       </div>
                     </td>
-                    <td className="table-cell">
-                      <button className="menu-button">
+                    <td className="tableCell">
+                      <button className="menuButton">
                         ⋯
                       </button>
                     </td>
@@ -195,8 +195,8 @@ function Dashboard() {
               </tbody>
             </table>
           </div>
-          <div className="table-footer">
-            <div className="table-pagination">
+          <div className="tableFooter">
+            <div className="tablePagination">
               1-7 of 100 SKUs
             </div>
           </div>

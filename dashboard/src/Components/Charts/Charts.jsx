@@ -5,27 +5,27 @@ import './Charts.css'
 const Charts = ({ brandContentData, assessmentData }) => {
     return (
         <div>        {/* Header */}
-            <div className="dashboard-header">
-                <h1 className="dashboard-title">Overview</h1>
-                <div className="dashboard-date">
+            <div className="dashboardHeader">
+                <h1 className="dashboardTitle">Overview</h1>
+                <div className="dashboardDate">
                     Current Score is for 19 Jun 25
                 </div>
             </div>
 
             {/* Overview Section - Charts */}
-            <div className="overview-grid">
+            <div className="overviewGrid">
                 {/* Brand Content Score Chart */}
-                <div className="chart-card">
-                    <div className="chart-header">
-                        <h2 className="chart-title">Brand Content Score</h2>
+                <div className="chartCard">
+                    <div className="chartHeader">
+                        <h2 className="chartTitle">Brand Content Score</h2>
                         
                     </div>
-                    <span className="chart-score">00</span>
-                    <span className="chart-subtitle"> on 30 May 25</span>
-                    <p className="chart-subtitle">
+                    <span className="chartScore">00</span>
+                    <span className="chartSubtitle"> on 30 May 25</span>
+                    <p className="chartSubtitle">
                         A score (00%) up (00%) 30 May 25
                     </p>
-                    <div className="chart-container">
+                    <div className="chartContainer">
                         <ResponsiveContainer width="100%" height="100%">
                             <AreaChart data={brandContentData}>
                                 <defs>
@@ -67,17 +67,17 @@ const Charts = ({ brandContentData, assessmentData }) => {
                 </div>
 
                 {/* Assessment Chart */}
-                <div className="chart-card">
-                    <div className="chart-header">
-                        <h2 className="chart-title">Assessment</h2>
+                <div className="chartCard">
+                    <div className="chartHeader">
+                        <h2 className="chartTitle">Assessment</h2>
                         
                     </div>
-                    <span className="chart-score">00</span>
-                    <span className="chart-subtitle"> on 30 May 25</span>
-                    <p className="chart-subtitle">
+                    <span className="chartScore">00</span>
+                    <span className="chartSubtitle"> on 30 May 25</span>
+                    <p className="chartSubtitle">
                         A score (00%) up (00%) 30 May 25
                     </p>
-                    <div className="chart-container">
+                    <div className="chartContainer">
                         <ResponsiveContainer width="100%" height="100%">
                             <AreaChart data={assessmentData}>
                                 <defs>
