@@ -30,11 +30,11 @@
     gap: 0.5rem;
   }
   
-  .dashboardTitle::before {
+  /* .dashboardTitle::before {
     content: "⚪";
     font-size: 0.8rem;
     color: #6b7280;
-  }
+  } */
   
   .dashboardDate {
     font-size: 0.875rem;
@@ -96,6 +96,10 @@
     margin-bottom: 1.5rem;
     line-height: 1.2;
   }
+
+  .trendIndicator {
+    color: #10b981 !important; /* Green color */
+}
   
   .chartContainer {
     height: 10rem;

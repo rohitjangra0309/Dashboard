@@ -8,7 +8,7 @@ const Charts = ({ brandContentData, assessmentData }) => {
             <div className="dashboardHeader">
                 <h1 className="dashboardTitle">Overview</h1>
                 <div className="dashboardDate">
-                    Current Score is for 19 Jun 25
+                    Content Score is for 19 Jun 25
                 </div>
             </div>
 
@@ -23,7 +23,7 @@ const Charts = ({ brandContentData, assessmentData }) => {
                     <span className="chartScore">00</span>
                     <span className="chartSubtitle"> on 30 May 25</span>
                     <p className="chartSubtitle">
-                        A score (00%) up (00%) 30 May 25
+                       <span className="trendIndicator">▲ 00% (00)</span> vs MTD 30 May 25
                     </p>
                     <div className="chartContainer">
                         <ResponsiveContainer width="100%" height="100%">
@@ -75,7 +75,7 @@ const Charts = ({ brandContentData, assessmentData }) => {
                     <span className="chartScore">00</span>
                     <span className="chartSubtitle"> on 30 May 25</span>
                     <p className="chartSubtitle">
-                        A score (00%) up (00%) 30 May 25
+                       <span className="trendIndicator">▲ 00% (00)</span> vs MTD 30 May 25
                     </p>
                     <div className="chartContainer">
                         <ResponsiveContainer width="100%" height="100%">
