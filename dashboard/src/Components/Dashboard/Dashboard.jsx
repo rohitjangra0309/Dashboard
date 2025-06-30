@@ -1,34 +1,8 @@
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Area, AreaChart } from 'recharts'
 import './Dashboard.css'
 import ChartsContainer from '../Charts/ChartsContainer'
+import BGRComponentContainer from '../BGRComponent/BGRComponentContainer'
 
 function Dashboard() {
-  // Sample data for charts
-  const brandContentData = [
-    { name: '17 May 24', value: 0 },
-    { name: '18 May 24', value: 15 },
-    { name: '19 May 24', value: 45 },
-    { name: '20 May 24', value: 60 },
-    { name: '21 May 24', value: 75 },
-  ]
-
-  const assessmentData = [
-    { name: '17 May 24', value: 0 },
-    { name: '18 May 24', value: 20 },
-    { name: '19 May 24', value: 50 },
-    { name: '20 May 24', value: 70 },
-    { name: '21 May 24', value: 85 },
-  ]
-
-  // BGR Categories data
-  const bgrCategories = [
-    { name: 'Category 01', score: '₹100 / INR', status: 'success' },
-    { name: 'Category 02', score: '₹100 / INR', status: 'success' },
-    { name: 'Category 03', score: '₹100 / INR', status: 'error' },
-    { name: 'Category 04', score: '₹100 / INR', status: 'error' },
-    { name: 'Assessment', score: '₹100 / INR', status: 'success' },
-    { name: 'Overall', score: '₹100 / INR', status: 'success' },
-  ]
 
   // SKUs data
   const skuData = [
@@ -70,33 +44,10 @@ function Dashboard() {
   return (
     <div className="dashboard">
       <div className="dashboardContainer">
-        
+
         <ChartsContainer />
 
-        {/* BGR Section */}
-        <div className="bgrSection">
-          <div className="bgrHeader">
-            <div className="bgrTitleRow">
-              <h2 className="bgrTitle">BGR</h2>
-              <button className="searchButton">Search</button>
-            </div>
-          </div>
-          <div className="bgrContent">
-            <div className="bgrGrid">
-              {bgrCategories.map((category, index) => (
-                <div key={index} className="bgrCategory">
-                  <div className="categoryLabel">
-                    {category.name}
-                  </div>
-                  <div className={`categoryScore ${category.status}`}>
-                    {category.score}
-                  </div>
-                  <div className={`statusIndicator ${category.status}`}></div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+        <BGRComponentContainer />
 
         {/* SKUs Section */}
         <div className="skusSection">
