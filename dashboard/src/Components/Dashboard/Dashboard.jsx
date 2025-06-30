@@ -1,4 +1,5 @@
 import './Dashboard.css'
+import { DashboardProvider } from '../../context/DashboardContext'
 import ChartsContainer from '../Charts/ChartsContainer'
 import BGRComponentContainer from '../BGRComponent/BGRComponentContainer'
 import SKUTableContainer from '../SKUTable/SKUTableContainer'
@@ -6,16 +7,18 @@ import SKUTableContainer from '../SKUTable/SKUTableContainer'
 function Dashboard() {
 
   return (
-    <div className="dashboard">
-      <div className="dashboardContainer">
+    <DashboardProvider>
+      <div className="dashboard">
+        <div className="dashboardContainer">
 
-        <ChartsContainer />
+          <ChartsContainer />
 
-        <BGRComponentContainer />
+          <BGRComponentContainer />
 
-        <SKUTableContainer />
+          <SKUTableContainer />
+        </div>
       </div>
-    </div>
+    </DashboardProvider>
   )
 }
 

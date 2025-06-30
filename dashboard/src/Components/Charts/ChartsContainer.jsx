@@ -1,24 +1,23 @@
 import React from 'react'
 import Charts from './Charts'
-
+import { useDashboard } from '../../context/DashboardContext'
 
 function ChartsContainer() {
-    const brandContentData = [
-        { name: '17 May 24', value: 20 },
-        { name: '19 May 24', value: 60 },
-        { name: '21 May 24', value: 75 },
-      ]
+    const { currentData, categories, selectedCategoryId } = useDashboard()
     
-      const assessmentData = [
-        { name: '17 May 24', value: 25 },
-        { name: '19 May 24', value: 70 },
-        { name: '21 May 24', value: 85 },
-      ]
-  return (
-    <div>
-        <Charts brandContentData={brandContentData} assessmentData={assessmentData} />
-    </div>
-  )
+    // Get selected category name
+    const selectedCategory = categories.find(cat => cat.id === selectedCategoryId)
+    const selectedCategoryName = selectedCategory ? selectedCategory.name : 'Overview'
+    
+    return (
+        <div>
+            <Charts 
+                brandContentData={currentData.chartData.brandContent} 
+                assessmentData={currentData.chartData.assessment}
+                selectedCategoryName={selectedCategoryName}
+            />
+        </div>
+    )
 }
 
 export default ChartsContainer

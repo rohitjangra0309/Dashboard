@@ -1,0 +1,344 @@
+{
+  "categories": [
+    {
+      "id": "category01",
+      "name": "Category 01",
+      "score": "₹100 / INR",
+      "status": "success",
+      "chartData": {
+        "brandContent": [
+          { "name": "17 May 24", "value": 85 },
+          { "name": "19 May 24", "value": 92 },
+          { "name": "21 May 24", "value": 88 }
+        ],
+        "assessment": [
+          { "name": "17 May 24", "value": 78 },
+          { "name": "19 May 24", "value": 85 },
+          { "name": "21 May 24", "value": 90 }
+        ]
+      },
+      "skuData": [
+        {
+          "name": "Category 01 - Premium Face Cleanser",
+          "contentScore": 85.0,
+          "titleCoverage": 95.0,
+          "images": 100.0,
+          "bulletPoints": 90.0,
+          "description": 85.0,
+          "aPlus": "Yes",
+          "reviews": 88.0,
+          "status": { 
+            "content": "success", 
+            "title": "success", 
+            "images": "success", 
+            "bullet": "success", 
+            "desc": "success", 
+            "reviews": "success" 
+          }
+        },
+        {
+          "name": "Category 01 - Gentle Foam Cleanser",
+          "contentScore": 78.0,
+          "titleCoverage": 85.0,
+          "images": 95.0,
+          "bulletPoints": 80.0,
+          "description": 75.0,
+          "aPlus": "No",
+          "reviews": 82.0,
+          "status": { 
+            "content": "warning", 
+            "title": "success", 
+            "images": "success", 
+            "bullet": "warning", 
+            "desc": "warning", 
+            "reviews": "success" 
+          }
+        },
+        {
+          "name": "Category 01 - Deep Clean Formula",
+          "contentScore": 92.0,
+          "titleCoverage": 100.0,
+          "images": 100.0,
+          "bulletPoints": 95.0,
+          "description": 88.0,
+          "aPlus": "Yes",
+          "reviews": 90.0,
+          "status": { 
+            "content": "success", 
+            "title": "success", 
+            "images": "success", 
+            "bullet": "success", 
+            "desc": "success", 
+            "reviews": "success" 
+          }
+        }
+      ]
+    },
+    {
+      "id": "category02",
+      "name": "Category 02",
+      "score": "₹150 / INR",
+      "status": "success",
+      "chartData": {
+        "brandContent": [
+          { "name": "17 May 24", "value": 65 },
+          { "name": "19 May 24", "value": 72 },
+          { "name": "21 May 24", "value": 80 }
+        ],
+        "assessment": [
+          { "name": "17 May 24", "value": 70 },
+          { "name": "19 May 24", "value": 78 },
+          { "name": "21 May 24", "value": 85 }
+        ]
+      },
+      "skuData": [
+        {
+          "name": "Category 02 - Moisturizing Cream",
+          "contentScore": 72.0,
+          "titleCoverage": 88.0,
+          "images": 85.0,
+          "bulletPoints": 75.0,
+          "description": 70.0,
+          "aPlus": "No",
+          "reviews": 78.0,
+          "status": { 
+            "content": "warning", 
+            "title": "success", 
+            "images": "success", 
+            "bullet": "warning", 
+            "desc": "warning", 
+            "reviews": "warning" 
+          }
+        },
+        {
+          "name": "Category 02 - Night Repair Serum",
+          "contentScore": 88.0,
+          "titleCoverage": 92.0,
+          "images": 95.0,
+          "bulletPoints": 85.0,
+          "description": 82.0,
+          "aPlus": "Yes",
+          "reviews": 85.0,
+          "status": { 
+            "content": "success", 
+            "title": "success", 
+            "images": "success", 
+            "bullet": "success", 
+            "desc": "success", 
+            "reviews": "success" 
+          }
+        }
+      ]
+    },
+    {
+      "id": "category03",
+      "name": "Category 03",
+      "score": "₹80 / INR",
+      "status": "error",
+      "chartData": {
+        "brandContent": [
+          { "name": "17 May 24", "value": 45 },
+          { "name": "19 May 24", "value": 52 },
+          { "name": "21 May 24", "value": 48 }
+        ],
+        "assessment": [
+          { "name": "17 May 24", "value": 40 },
+          { "name": "19 May 24", "value": 45 },
+          { "name": "21 May 24", "value": 50 }
+        ]
+      },
+      "skuData": [
+        {
+          "name": "Category 03 - Basic Toner",
+          "contentScore": 45.0,
+          "titleCoverage": 60.0,
+          "images": 70.0,
+          "bulletPoints": 40.0,
+          "description": 35.0,
+          "aPlus": "No",
+          "reviews": 50.0,
+          "status": { 
+            "content": "error", 
+            "title": "error", 
+            "images": "warning", 
+            "bullet": "error", 
+            "desc": "error", 
+            "reviews": "error" 
+          }
+        },
+        {
+          "name": "Category 03 - Refreshing Mist",
+          "contentScore": 52.0,
+          "titleCoverage": 65.0,
+          "images": 75.0,
+          "bulletPoints": 48.0,
+          "description": 42.0,
+          "aPlus": "No",
+          "reviews": 55.0,
+          "status": { 
+            "content": "error", 
+            "title": "warning", 
+            "images": "warning", 
+            "bullet": "error", 
+            "desc": "error", 
+            "reviews": "error" 
+          }
+        }
+      ]
+    },
+    {
+      "id": "category04",
+      "name": "Category 04",
+      "score": "₹120 / INR",
+      "status": "error",
+      "chartData": {
+        "brandContent": [
+          { "name": "17 May 24", "value": 55 },
+          { "name": "19 May 24", "value": 62 },
+          { "name": "21 May 24", "value": 58 }
+        ],
+        "assessment": [
+          { "name": "17 May 24", "value": 50 },
+          { "name": "19 May 24", "value": 58 },
+          { "name": "21 May 24", "value": 65 }
+        ]
+      },
+      "skuData": [
+        {
+          "name": "Category 04 - Anti-Aging Cream",
+          "contentScore": 58.0,
+          "titleCoverage": 70.0,
+          "images": 80.0,
+          "bulletPoints": 55.0,
+          "description": 50.0,
+          "aPlus": "No",
+          "reviews": 62.0,
+          "status": { 
+            "content": "error", 
+            "title": "warning", 
+            "images": "success", 
+            "bullet": "error", 
+            "desc": "error", 
+            "reviews": "error" 
+          }
+        }
+      ]
+    },
+    {
+      "id": "assessment",
+      "name": "Assessment",
+      "score": "₹200 / INR",
+      "status": "success",
+      "chartData": {
+        "brandContent": [
+          { "name": "17 May 24", "value": 90 },
+          { "name": "19 May 24", "value": 95 },
+          { "name": "21 May 24", "value": 92 }
+        ],
+        "assessment": [
+          { "name": "17 May 24", "value": 88 },
+          { "name": "19 May 24", "value": 92 },
+          { "name": "21 May 24", "value": 95 }
+        ]
+      },
+      "skuData": [
+        {
+          "name": "Assessment - Complete Skincare Set",
+          "contentScore": 95.0,
+          "titleCoverage": 100.0,
+          "images": 100.0,
+          "bulletPoints": 98.0,
+          "description": 92.0,
+          "aPlus": "Yes",
+          "reviews": 94.0,
+          "status": { 
+            "content": "success", 
+            "title": "success", 
+            "images": "success", 
+            "bullet": "success", 
+            "desc": "success", 
+            "reviews": "success" 
+          }
+        },
+        {
+          "name": "Assessment - Premium Bundle",
+          "contentScore": 90.0,
+          "titleCoverage": 95.0,
+          "images": 98.0,
+          "bulletPoints": 88.0,
+          "description": 85.0,
+          "aPlus": "Yes",
+          "reviews": 92.0,
+          "status": { 
+            "content": "success", 
+            "title": "success", 
+            "images": "success", 
+            "bullet": "success", 
+            "desc": "success", 
+            "reviews": "success" 
+          }
+        }
+      ]
+    },
+    {
+      "id": "overall",
+      "name": "Overall",
+      "score": "₹300 / INR",
+      "status": "success",
+      "chartData": {
+        "brandContent": [
+          { "name": "17 May 24", "value": 75 },
+          { "name": "19 May 24", "value": 82 },
+          { "name": "21 May 24", "value": 78 }
+        ],
+        "assessment": [
+          { "name": "17 May 24", "value": 70 },
+          { "name": "19 May 24", "value": 78 },
+          { "name": "21 May 24", "value": 85 }
+        ]
+      },
+      "skuData": [
+        {
+          "name": "Overall - Master Collection",
+          "contentScore": 82.0,
+          "titleCoverage": 88.0,
+          "images": 90.0,
+          "bulletPoints": 78.0,
+          "description": 75.0,
+          "aPlus": "Yes",
+          "reviews": 85.0,
+          "status": { 
+            "content": "success", 
+            "title": "success", 
+            "images": "success", 
+            "bullet": "warning", 
+            "desc": "warning", 
+            "reviews": "success" 
+          }
+        },
+        {
+          "name": "Overall - Complete Range",
+          "contentScore": 78.0,
+          "titleCoverage": 85.0,
+          "images": 88.0,
+          "bulletPoints": 75.0,
+          "description": 72.0,
+          "aPlus": "No",
+          "reviews": 80.0,
+          "status": { 
+            "content": "warning", 
+            "title": "success", 
+            "images": "success", 
+            "bullet": "warning", 
+            "desc": "warning", 
+            "reviews": "success" 
+          }
+        }
+      ]
+    }
+  ],
+  "globalScores": {
+    "contentScore": "78",
+    "assortmentScore": "85"
+  }
+} 

@@ -154,6 +154,16 @@
   background-color: #e2e8f0;
 }
 
+.bgrCategoryCard.selected {
+  background-color: #dbeafe;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgb(59 130 246 / 0.2);
+}
+
+.bgrCategoryCard.selected:hover {
+  background-color: #dbeafe;
+}
+
 .categoryLabel {
   background-color: #3b82f6;
   color: white;

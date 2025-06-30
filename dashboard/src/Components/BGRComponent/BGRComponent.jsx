@@ -1,7 +1,7 @@
 import React from 'react'
 import './BGRComponent.css'
 
-const BGRComponent = ({ categories, contentScore, assortmentScore }) => {
+const BGRComponent = ({ categories, contentScore, assortmentScore, selectedCategoryId, onCategorySelect }) => {
     return (
         <div className="bgrContainer">
             {/* Header Row - BGR title and Search */}
@@ -49,7 +49,12 @@ const BGRComponent = ({ categories, contentScore, assortmentScore }) => {
                 {/* Right Side - Categories */}
                 <div className="bgrCategoriesRow">
                     {categories.map((category, index) => (
-                        <div key={index} className="bgrCategoryCard">
+                        <div 
+                            key={index} 
+                            className={`bgrCategoryCard ${selectedCategoryId === category.id ? 'selected' : ''}`}
+                            onClick={() => onCategorySelect(category.id)}
+                            style={{ cursor: 'pointer' }}
+                        >
                             <div className="categoryLabel">
                                 {category.name}
                             </div>
