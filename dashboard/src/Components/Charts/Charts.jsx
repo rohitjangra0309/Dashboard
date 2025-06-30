@@ -34,17 +34,17 @@ const Charts = ({ brandContentData, assessmentData }) => {
                                         <stop offset="100%" stopColor="#60a5fa" stopOpacity={0.05} />
                                     </linearGradient>
                                 </defs>
-                                <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
                                 <XAxis
                                     dataKey="name"
                                     axisLine={false}
                                     tickLine={false}
-                                    tick={{ fontSize: 12, fill: '#94a3b8' }}
+                                    tick={{ fontSize: 11, fill: '#9ca3af' }}
                                 />
                                 <YAxis
                                     axisLine={false}
                                     tickLine={false}
-                                    tick={{ fontSize: 12, fill: '#94a3b8' }}
+                                    tick={false}
+                                    hide={true}
                                 />
                                 <Tooltip
                                     contentStyle={{
@@ -60,6 +60,7 @@ const Charts = ({ brandContentData, assessmentData }) => {
                                     stroke="#60a5fa"
                                     strokeWidth={2}
                                     fill="url(#blueGradient)"
+                                    dot={{ fill: 'white', stroke: '#60a5fa', strokeWidth: 2, r: 4 }}
                                 />
                             </AreaChart>
                         </ResponsiveContainer>
@@ -86,17 +87,17 @@ const Charts = ({ brandContentData, assessmentData }) => {
                                         <stop offset="100%" stopColor="#34d399" stopOpacity={0.05} />
                                     </linearGradient>
                                 </defs>
-                                <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
                                 <XAxis
                                     dataKey="name"
                                     axisLine={false}
                                     tickLine={false}
-                                    tick={{ fontSize: 12, fill: '#94a3b8' }}
+                                    tick={{ fontSize: 11, fill: '#9ca3af' }}
                                 />
                                 <YAxis
                                     axisLine={false}
                                     tickLine={false}
-                                    tick={{ fontSize: 12, fill: '#94a3b8' }}
+                                    tick={false}
+                                    hide={true}
                                 />
                                 <Tooltip
                                     contentStyle={{
@@ -112,6 +113,7 @@ const Charts = ({ brandContentData, assessmentData }) => {
                                     stroke="#34d399"
                                     strokeWidth={2}
                                     fill="url(#greenGradient)"
+                                    dot={{ fill: 'white', stroke: '#34d399', strokeWidth: 2, r: 4 }}
                                 />
                             </AreaChart>
                         </ResponsiveContainer>

@@ -39,9 +39,9 @@
   .dashboardDate {
     font-size: 0.875rem;
     color: #6b7280;
-    background-color: #f0f9ff;
+    background-color: rgb(247, 247, 209);
     padding: 0.25rem 0.75rem;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     border: 1px solid #e0f2fe;
   }
   
@@ -65,7 +65,7 @@
     border-radius: 0.75rem;
     box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.05);
     border: 1px solid #f3f4f6;
-    padding: 1.5rem;
+    padding: 0.5rem;
     position: relative;
   }
   
@@ -104,6 +104,7 @@
   .chartContainer {
     height: 10rem;
     position: relative;
+    padding: 0 0.5rem;
   }
   
   /* Chart specific styling */
