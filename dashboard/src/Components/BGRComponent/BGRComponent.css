@@ -1,154 +1,203 @@
-  /* BGR Component Styles */
-  .bgrHeader {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-  }
+/* BGR Component Styles */
+.bgrContainer {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+  padding: 1.5rem;
+}
 
-  .bgrSearchContainer {
-    display: flex;
-    align-items: flex-end;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-    background-color: white;
-    border-radius: 0.5rem;
-    /* box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1); */
-  }
+/* Top Header Row - BGR title and Search */
+.bgrTopHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
 
-  .bgrSearchInput {
-    /* flex: 1; */
-    padding: 0.5rem 1rem;
-    border: 1px solid #e5e7eb;
-    border-radius: 0.375rem;
-    font-size: 0.875rem;
-    outline: none;
-  }
+.bgrTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+}
 
-  .bgrSearchInput:focus {
-    border-color: #3b82f6;
-    box-shadow: 0 0 0 3px rgb(59 130 246 / 0.1);
-  }
+.bgrSearchContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
 
-  .bgrSearchButton {
-    padding: 0.5rem;
-    background-color: #3b82f6;
-    color: white;
-    border-radius: 0.375rem;
-    font-size: 0.875rem;
-    transition: background-color 0.2s;
-  }
+.bgrSearchInput {
+  padding: 0.5rem 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  outline: none;
+  width: 200px;
+}
 
-  .bgrSearchButton:hover {
-    background-color: #2563eb;
-  }
+.bgrSearchInput:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgb(59 130 246 / 0.1);
+}
 
-  .bgrMainContainer {
-    display: flex;
-    gap: 1.5rem;
-    background-color: white;
-    border-radius: 0.5rem;
-    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
-    min-height: 400px;
-  }
+.bgrSearchButton {
+  padding: 0.5rem;
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  transition: background-color 0.2s;
+}
 
-  .bgrLeftPanel {
-    width: 250px;
-    padding: 1.5rem;
-    border-right: 1px solid #e5e7eb;
-    background-color: #f9fafb;
-    border-radius: 0.5rem 0 0 0.5rem;
-  }
+.bgrSearchButton:hover {
+  background-color: #2563eb;
+}
 
-  .bgrCategoriesTitle {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #374151;
-    margin-bottom: 1rem;
-  }
+/* Second Row - Hamburger Menu, Score Cards, and Categories */
+.bgrSecondRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
 
-  .bgrCategoriesList {
-    display: flex;
-    flex-direction: row;
-    gap: 0.75rem;
-  }
+.bgrLeftContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
 
-  .bgrCategoryItem {
-    text-align: center;
-    padding: 0.5rem;
-    border-radius: 0.375rem;
-    transition: background-color 0.2s;
-  }
+.bgrHamburgerMenu {
+  display: flex;
+  align-items: center;
+}
 
-  .bgrCategoryItem:hover {
-    background-color: #e5e7eb;
-  }
+.hamburgerButton {
+  background: none;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  transition: transform 0.2s;
+}
 
-  .bgrRightPanel {
-    /* flex: 1; */
-    padding: 1.5rem;
-  }
+.hamburgerButton:hover {
+  transform: scale(1.1);
+}
 
-  .bgrMenuScoresRow {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 2rem;
-    margin-top: 1rem;
-  }
+.hamburgerLine {
+  width: 1.5rem;
+  height: 0.125rem;
+  background-color: #374151;
+  border-radius: 0.125rem;
+}
 
-  .bgrHamburgerMenu {
-    display: flex;
-    align-items: center;
-  }
+.bgrScoreCards {
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+}
 
-  .hamburgerButton {
-    background: none;
-    padding: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-    transition: transform 0.2s;
-  }
+.bgrScoreCard {
+  text-align: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  min-width: 120px;
+}
 
-  .hamburgerButton:hover {
-    transform: scale(1.1);
-  }
+.scoreLabel {
+  font-size: 0.75rem;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
 
-  .hamburgerLine {
-    width: 1.5rem;
-    height: 0.125rem;
-    background-color: #374151;
-    border-radius: 0.125rem;
-  }
+.scoreValue {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2937;
+  line-height: 1;
+}
 
-  .bgrScoreCard {
-    text-align: center;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    background-color: #f9fafb;
-    border: 1px solid #e5e7eb;
-    min-width: 120px;
-  }
+.scoreSubtext {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin-top: 0.25rem;
+}
 
-  .scoreLabel {
-    font-size: 0.75rem;
-    color: #6b7280;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 0.5rem;
-  }
+/* Categories Row - Now on the right side */
+.bgrCategoriesRow {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  flex: 1;
+  justify-content: flex-end;
+}
 
-  .scoreValue {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #1f2937;
-    line-height: 1;
-  }
+.bgrCategoryCard {
+  text-align: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  min-width: 140px;
+  transition: background-color 0.2s;
+}
 
-  .scoreSubtext {
-    font-size: 0.75rem;
-    color: #9ca3af;
-    margin-top: 0.25rem;
-  } 
+.bgrCategoryCard:hover {
+  background-color: #e2e8f0;
+}
+
+.categoryLabel {
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.categoryScore {
+  padding: 0.25rem 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.categoryScore.success {
+  color: #059669;
+}
+
+.categoryScore.error {
+  color: #dc2626;
+}
+
+.categoryScore.warning {
+  color: #d97706;
+}
+
+.statusIndicator {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  margin: 0.5rem auto 0;
+}
+
+.statusIndicator.success {
+  background-color: #10b981;
+}
+
+.statusIndicator.error {
+  background-color: #ef4444;
+}
+
+.statusIndicator.warning {
+  background-color: #f59e0b;
+} 
