@@ -1,9 +1,15 @@
 import React, { useState } from 'react'
 import './SKUTable.css'
+import { useDashboard } from '../../context/DashboardContext'
 
 const SKUTable = ({ skuData }) => {
     const [activeTab, setActiveTab] = useState('Official Store')
     const [searchTerm, setSearchTerm] = useState('')
+    const { categories, selectedCategoryId } = useDashboard()
+
+    // Get selected category name
+    const selectedCategory = categories.find(cat => cat.id === selectedCategoryId)
+    const selectedCategoryName = selectedCategory ? selectedCategory.name : 'All Categories'
 
     const filteredData = skuData.filter(sku => 
         sku.name.toLowerCase().includes(searchTerm.toLowerCase())
@@ -13,66 +19,88 @@ const SKUTable = ({ skuData }) => {
         <div className="skuTableContainer">
             {/* Header with Title and Action */}
             <div className="skuTableHeader">
-                <h2 className="skuTableTitle">SKUs</h2>
+                <h2 className="skuTableTitle">SKUs - {selectedCategoryName}</h2>
                 <div className="skuTableActions">
                     <button className="exportButton">📊 Export</button>
                 </div>
             </div>
 
-            {/* Tabs */}
-            <div className="skuTabs">
-                <button 
-                    className={`skuTab ${activeTab === 'Official Store' ? 'active' : ''}`}
-                    onClick={() => setActiveTab('Official Store')}
-                >
-                    📦 Official Store
-                </button>
-                <button 
-                    className={`skuTab ${activeTab === 'Summaries' ? 'active' : ''}`}
-                    onClick={() => setActiveTab('Summaries')}
-                >
-                    📋 Summaries
-                </button>
+            {/* Tabs and Search in same container */}
+            <div className="skuTabsSearchContainer">
+                {/* Tabs on left */}
+                <div className="skuTabs">
+                    <button 
+                        className={`skuTab ${activeTab === 'Official Store' ? 'active' : ''}`}
+                        onClick={() => setActiveTab('Official Store')}
+                    >
+                        📦 Official Store
+                    </button>
+                    <button 
+                        className={`skuTab ${activeTab === 'Summaries' ? 'active' : ''}`}
+                        onClick={() => setActiveTab('Summaries')}
+                    >
+                        📋 Summaries
+                    </button>
+                </div>
+
+                {/* Search on right */}
+                <div className="skuSearchContainer">
+                    <input
+                        type="text"
+                        placeholder="Search"
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                        className="skuSearchInput"
+                    />
+                    <button className="skuSearchButton">🔍</button>
+                    <button className="skuFilterButton">⚙️</button>
+                </div>
             </div>
 
-            {/* Search Bar */}
-            <div className="skuSearchContainer">
-                <input
-                    type="text"
-                    placeholder="Search"
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    className="skuSearchInput"
-                />
-                <button className="skuSearchButton">🔍</button>
-                <button className="skuFilterButton">⚙️</button>
-            </div>
-
-            {/* Table */}
+            {/* Table with 2-row header */}
             <div className="skuTableWrapper">
                 <table className="skuTable">
                     <thead>
-                        <tr>
-                            <th className="checkboxColumn">
-                                <input type="checkbox" />
-                            </th>
-                            <th>SKU Name</th>
-                            <th>Content Score</th>
-                            <th>Title Coverage</th>
-                            <th>Images</th>
-                            <th>Bullet Points</th>
-                            <th>Description</th>
-                            <th>A+ Content</th>
-                            <th>Reviews & Ratings</th>
-                            <th>Action</th>
+                        {/* First header row - Main column names */}
+                        <tr className="headerRow1">
+                            <th className="skuNameColumn">SKU NAME</th>
+                            <th className="scoreColumn">CONTENT SCORE</th>
+                            <th className="scoreColumn">TITLE COVERAGE</th>
+                            <th className="scoreColumn">IMAGES</th>
+                            <th className="scoreColumn">BULLET POINTS</th>
+                            <th className="scoreColumn">DESCRIPTION</th>
+                            <th className="scoreColumn">A+ CONTENT</th>
+                            <th className="scoreColumn">REVIEWS & RATINGS</th>
+                            <th className="actionColumn">ACTION</th>
+                        </tr>
+                        {/* Second header row - Sub details */}
+                        <tr className="headerRow2">
+                            <th className="skuNameColumn">Overall</th>
+                            <th className="scoreColumn">{filteredData.length > 0 ? 
+                                (filteredData.reduce((sum, sku) => sum + sku.contentScore, 0) / filteredData.length).toFixed(1) 
+                                : '0.0'}</th>
+                            <th className="scoreColumn">{filteredData.length > 0 ? 
+                                (filteredData.reduce((sum, sku) => sum + sku.titleCoverage, 0) / filteredData.length).toFixed(1) 
+                                : '0.0'}</th>
+                            <th className="scoreColumn">{filteredData.length > 0 ? 
+                                (filteredData.reduce((sum, sku) => sum + sku.images, 0) / filteredData.length).toFixed(1) 
+                                : '0.0'}</th>
+                            <th className="scoreColumn">{filteredData.length > 0 ? 
+                                (filteredData.reduce((sum, sku) => sum + sku.bulletPoints, 0) / filteredData.length).toFixed(1) 
+                                : '0.0'}</th>
+                            <th className="scoreColumn">{filteredData.length > 0 ? 
+                                (filteredData.reduce((sum, sku) => sum + sku.description, 0) / filteredData.length).toFixed(1) 
+                                : '0.0'}</th>
+                            <th className="scoreColumn">{filteredData.filter(sku => sku.aPlus === 'Yes').length}/{filteredData.length}</th>
+                            <th className="scoreColumn">{filteredData.length > 0 ? 
+                                (filteredData.reduce((sum, sku) => sum + sku.reviews, 0) / filteredData.length).toFixed(1) 
+                                : '0.0'}</th>
+                            <th className="actionColumn">⋯</th>
                         </tr>
                     </thead>
                     <tbody>
                         {filteredData.map((sku, index) => (
                             <tr key={index} className="skuTableRow">
-                                <td className="checkboxColumn">
-                                    <input type="checkbox" />
-                                </td>
                                 <td className="skuNameCell">
                                     <div className="skuNameContainer">
                                         <span className="skuName">{sku.name}</span>
