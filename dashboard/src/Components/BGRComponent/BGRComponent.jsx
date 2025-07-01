@@ -55,13 +55,27 @@ const BGRComponent = ({ categories, contentScore, assortmentScore, selectedCateg
                             onClick={() => onCategorySelect(category.id)}
                             style={{ cursor: 'pointer' }}
                         >
-                            <div className="categoryLabel">
-                                {category.name}
+                            {/* Rectangle 1: Category Name */}
+                            <div className="categoryHeaderRect">
+                                <div className="categoryLabel">
+                                    {category.name}
+                                </div>
                             </div>
-                            <div className={`categoryScore ${category.status}`}>
-                                {category.score}
+                            
+                            {/* Rectangle 2: Score */}
+                            <div className="categoryScoreRect">
+                                <div className={`categoryScore ${category.status}`}>
+                                    {category.score}
+                                </div>
                             </div>
-                            <div className={`statusIndicator ${category.status}`}></div>
+                            
+                            {/* Rectangle 3: Status */}
+                            <div className="categoryStatusRect">
+                                <div className="categorySubtitle">
+                                    Status: {category.status}
+                                </div>
+                                <div className={`statusIndicator ${category.status}`}></div>
+                            </div>
                         </div>
                     ))}
                 </div>
