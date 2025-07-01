@@ -1,5 +1,5 @@
 import React from 'react'
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Area, AreaChart } from 'recharts'
+import { XAxis, YAxis, Tooltip, ResponsiveContainer, Area, AreaChart } from 'recharts'
 import '../../App.css'
 import infoIcon from '../../assets/infoIcon.svg'
 
@@ -45,7 +45,7 @@ const Charts = ({ brandContentData, assessmentData, selectedCategoryName }) => {
                                 </defs>
                                 <XAxis
                                     dataKey="name"
-                                    axisLine={false}
+                                    axisLine={{ stroke: '#00000020', strokeWidth: 1 }}
                                     tickLine={false}
                                     tick={{ fontSize: 11, fill: '#9ca3af' }}
                                 />
@@ -102,7 +102,7 @@ const Charts = ({ brandContentData, assessmentData, selectedCategoryName }) => {
                                 </defs>
                                 <XAxis
                                     dataKey="name"
-                                    axisLine={false}
+                                    axisLine={{ stroke: '#00000020', strokeWidth: 1 }}
                                     tickLine={false}
                                     tick={{ fontSize: 11, fill: '#9ca3af' }}
                                 />
