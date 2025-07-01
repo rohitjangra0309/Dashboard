@@ -29,7 +29,14 @@ const Charts = ({ brandContentData, assessmentData, selectedCategoryName }) => {
                     <span className="chartScore">{brandContentData && brandContentData.length > 0 ? brandContentData[brandContentData.length - 1].value : '00'}</span>
                     <span className="chartSubtitle"> on 30 May 25</span>
                     <p className="chartSubtitle">
-                        <span className="trendIndicator">▲ {brandContentData && brandContentData.length > 1 ?
+                        <span className={`trendIndicator ${
+                            brandContentData && brandContentData.length > 1 ? 
+                                (brandContentData[brandContentData.length - 1].value - brandContentData[brandContentData.length - 2].value) >= 0 ? 'positive' : 'negative'
+                                : 'positive'
+                        }`}>
+                            {brandContentData && brandContentData.length > 1 ? 
+                                (brandContentData[brandContentData.length - 1].value - brandContentData[brandContentData.length - 2].value) >= 0 ? '▲' : '▼'
+                                : '▲'} {brandContentData && brandContentData.length > 1 ?
                             ((brandContentData[brandContentData.length - 1].value - brandContentData[brandContentData.length - 2].value) / brandContentData[brandContentData.length - 2].value * 100).toFixed(1)
                             : '0.0'}% ({brandContentData && brandContentData.length > 1 ?
                                 (brandContentData[brandContentData.length - 1].value - brandContentData[brandContentData.length - 2].value).toFixed(0)
@@ -86,7 +93,14 @@ const Charts = ({ brandContentData, assessmentData, selectedCategoryName }) => {
                     <span className="chartScore">{assessmentData && assessmentData.length > 0 ? assessmentData[assessmentData.length - 1].value : '00'}</span>
                     <span className="chartSubtitle"> on 30 May 25</span>
                     <p className="chartSubtitle">
-                        <span className="trendIndicator">▲ {assessmentData && assessmentData.length > 1 ?
+                        <span className={`trendIndicator ${
+                            assessmentData && assessmentData.length > 1 ? 
+                                (assessmentData[assessmentData.length - 1].value - assessmentData[assessmentData.length - 2].value) >= 0 ? 'positive' : 'negative'
+                                : 'positive'
+                        }`}>
+                            {assessmentData && assessmentData.length > 1 ? 
+                                (assessmentData[assessmentData.length - 1].value - assessmentData[assessmentData.length - 2].value) >= 0 ? '▲' : '▼'
+                                : '▲'} {assessmentData && assessmentData.length > 1 ?
                             ((assessmentData[assessmentData.length - 1].value - assessmentData[assessmentData.length - 2].value) / assessmentData[assessmentData.length - 2].value * 100).toFixed(1)
                             : '0.0'}% ({assessmentData && assessmentData.length > 1 ?
                                 (assessmentData[assessmentData.length - 1].value - assessmentData[assessmentData.length - 2].value).toFixed(0)

@@ -73,8 +73,16 @@ const BGRComponent = ({ categories, contentScore, assortmentScore, selectedCateg
                                         ? category.chartData.brandContent[category.chartData.brandContent.length - 1].value 
                                         : '00'}
                                 </div>
-                                <div className="categoryTrendIndicator">
-                                    ▲ {category.chartData.brandContent && category.chartData.brandContent.length > 1 ? 
+                                <div className={`categoryTrendIndicator ${
+                                    category.chartData.brandContent && category.chartData.brandContent.length > 1 ? 
+                                        (category.chartData.brandContent[category.chartData.brandContent.length - 1].value - 
+                                         category.chartData.brandContent[category.chartData.brandContent.length - 2].value) >= 0 ? 'positive' : 'negative'
+                                        : 'positive'
+                                }`}>
+                                    {category.chartData.brandContent && category.chartData.brandContent.length > 1 ? 
+                                        (category.chartData.brandContent[category.chartData.brandContent.length - 1].value - 
+                                         category.chartData.brandContent[category.chartData.brandContent.length - 2].value) >= 0 ? '▲' : '▼'
+                                        : '▲'} {category.chartData.brandContent && category.chartData.brandContent.length > 1 ? 
                                         ((category.chartData.brandContent[category.chartData.brandContent.length - 1].value - 
                                           category.chartData.brandContent[category.chartData.brandContent.length - 2].value) / 
                                           category.chartData.brandContent[category.chartData.brandContent.length - 2].value * 100).toFixed(1) 
@@ -92,8 +100,16 @@ const BGRComponent = ({ categories, contentScore, assortmentScore, selectedCateg
                                         ? category.chartData.brandContent[category.chartData.brandContent.length - 1].value 
                                         : '00'}
                                 </div>
-                                <div className="categoryTrendIndicator">
-                                    ▲ {category.chartData.brandContent && category.chartData.brandContent.length > 1 ? 
+                                <div className={`categoryTrendIndicator ${
+                                    category.chartData.brandContent && category.chartData.brandContent.length > 1 ? 
+                                        (category.chartData.brandContent[category.chartData.brandContent.length - 1].value - 
+                                         category.chartData.brandContent[category.chartData.brandContent.length - 2].value) >= 0 ? 'positive' : 'negative'
+                                        : 'positive'
+                                }`}>
+                                    {category.chartData.brandContent && category.chartData.brandContent.length > 1 ? 
+                                        (category.chartData.brandContent[category.chartData.brandContent.length - 1].value - 
+                                         category.chartData.brandContent[category.chartData.brandContent.length - 2].value) >= 0 ? '▲' : '▼'
+                                        : '▲'} {category.chartData.brandContent && category.chartData.brandContent.length > 1 ? 
                                         ((category.chartData.brandContent[category.chartData.brandContent.length - 1].value - 
                                           category.chartData.brandContent[category.chartData.brandContent.length - 2].value) / 
                                           category.chartData.brandContent[category.chartData.brandContent.length - 2].value * 100).toFixed(1) 

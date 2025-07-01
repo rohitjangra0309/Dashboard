@@ -257,10 +257,17 @@
 
 .categoryTrendIndicator {
   font-size: 0.7rem;
-  color: #10b981;
   font-weight: 500;
   margin: 0;
   line-height: 1.4;
+}
+
+.categoryTrendIndicator.positive {
+  color: #10b981;
+}
+
+.categoryTrendIndicator.negative {
+  color: #ef4444;
 }
 
 /* Remove color variations - all scores should be black */

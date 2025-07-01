@@ -133,9 +133,13 @@
     line-height: 1.2;
   }
 
-  .trendIndicator {
+  .trendIndicator.positive {
     color: #10b981 !important; /* Green color */
-}
+  }
+
+  .trendIndicator.negative {
+    color: #ef4444 !important; /* Red color */
+  }
   
   .chartContainer {
     height: 10rem;
