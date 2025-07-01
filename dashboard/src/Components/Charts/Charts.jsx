@@ -1,14 +1,19 @@
 import React from 'react'
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Area, AreaChart } from 'recharts'
 import '../../App.css'
+import infoIcon from '../../assets/infoIcon.svg'
 
 const Charts = ({ brandContentData, assessmentData, selectedCategoryName }) => {
     return (
         <div>        {/* Header */}
             <div className="dashboardHeader">
-                <h1 className="dashboardTitle">Overview - {selectedCategoryName}</h1>
+                <h1 className="dashboardTitle">
+                    Overview for <span className="categoryNameTag">{selectedCategoryName}</span>
+                </h1>
                 <div className="dashboardDate">
-                    Content Score is for 19 Jun 25
+                    <img src={infoIcon} alt="Info" className="infoIcon" />
+                    <span>Content Score is for 19 Jun 25</span>
+
                 </div>
             </div>
 
@@ -18,16 +23,16 @@ const Charts = ({ brandContentData, assessmentData, selectedCategoryName }) => {
                 <div className="chartCard">
                     <div className="chartHeader">
                         <h2 className="chartTitle">Brand Content Score</h2>
-                        
+                        <img src={infoIcon} alt="Info" className="infoIcon" />
                     </div>
                     <span className="chartScore">{brandContentData && brandContentData.length > 0 ? brandContentData[brandContentData.length - 1].value : '00'}</span>
                     <span className="chartSubtitle"> on 30 May 25</span>
                     <p className="chartSubtitle">
-                       <span className="trendIndicator">▲ {brandContentData && brandContentData.length > 1 ? 
-                         ((brandContentData[brandContentData.length - 1].value - brandContentData[brandContentData.length - 2].value) / brandContentData[brandContentData.length - 2].value * 100).toFixed(1) 
-                         : '0.0'}% ({brandContentData && brandContentData.length > 1 ? 
-                         (brandContentData[brandContentData.length - 1].value - brandContentData[brandContentData.length - 2].value).toFixed(0) 
-                         : '00'})</span> vs MTD 30 May 25
+                        <span className="trendIndicator">▲ {brandContentData && brandContentData.length > 1 ?
+                            ((brandContentData[brandContentData.length - 1].value - brandContentData[brandContentData.length - 2].value) / brandContentData[brandContentData.length - 2].value * 100).toFixed(1)
+                            : '0.0'}% ({brandContentData && brandContentData.length > 1 ?
+                                (brandContentData[brandContentData.length - 1].value - brandContentData[brandContentData.length - 2].value).toFixed(0)
+                                : '00'})</span> vs MTD 30 May 25
                     </p>
                     <div className="chartContainer">
                         <ResponsiveContainer width="100%" height="100%">
@@ -75,16 +80,16 @@ const Charts = ({ brandContentData, assessmentData, selectedCategoryName }) => {
                 <div className="chartCard">
                     <div className="chartHeader">
                         <h2 className="chartTitle">Assessment</h2>
-                        
+                        <img src={infoIcon} alt="Info" className="infoIcon" />
                     </div>
                     <span className="chartScore">{assessmentData && assessmentData.length > 0 ? assessmentData[assessmentData.length - 1].value : '00'}</span>
                     <span className="chartSubtitle"> on 30 May 25</span>
                     <p className="chartSubtitle">
-                       <span className="trendIndicator">▲ {assessmentData && assessmentData.length > 1 ? 
-                         ((assessmentData[assessmentData.length - 1].value - assessmentData[assessmentData.length - 2].value) / assessmentData[assessmentData.length - 2].value * 100).toFixed(1) 
-                         : '0.0'}% ({assessmentData && assessmentData.length > 1 ? 
-                         (assessmentData[assessmentData.length - 1].value - assessmentData[assessmentData.length - 2].value).toFixed(0) 
-                         : '00'})</span> vs MTD 30 May 25
+                        <span className="trendIndicator">▲ {assessmentData && assessmentData.length > 1 ?
+                            ((assessmentData[assessmentData.length - 1].value - assessmentData[assessmentData.length - 2].value) / assessmentData[assessmentData.length - 2].value * 100).toFixed(1)
+                            : '0.0'}% ({assessmentData && assessmentData.length > 1 ?
+                                (assessmentData[assessmentData.length - 1].value - assessmentData[assessmentData.length - 2].value).toFixed(0)
+                                : '00'})</span> vs MTD 30 May 25
                     </p>
                     <div className="chartContainer">
                         <ResponsiveContainer width="100%" height="100%">
