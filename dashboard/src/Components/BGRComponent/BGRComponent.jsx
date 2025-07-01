@@ -65,16 +65,39 @@ const BGRComponent = ({ categories, contentScore, assortmentScore, selectedCateg
                             {/* Rectangle 2: Score */}
                             <div className="categoryScoreRect">
                                 <div className={`categoryScore ${category.status}`}>
-                                    {category.score}
+                                    {category.chartData.brandContent && category.chartData.brandContent.length > 0 
+                                        ? category.chartData.brandContent[category.chartData.brandContent.length - 1].value 
+                                        : '00'}
+                                </div>
+                                <div className="categoryTrendIndicator">
+                                    ▲ {category.chartData.brandContent && category.chartData.brandContent.length > 1 ? 
+                                        ((category.chartData.brandContent[category.chartData.brandContent.length - 1].value - 
+                                          category.chartData.brandContent[category.chartData.brandContent.length - 2].value) / 
+                                          category.chartData.brandContent[category.chartData.brandContent.length - 2].value * 100).toFixed(1) 
+                                        : '0.0'}% ({category.chartData.brandContent && category.chartData.brandContent.length > 1 ? 
+                                        (category.chartData.brandContent[category.chartData.brandContent.length - 1].value - 
+                                          category.chartData.brandContent[category.chartData.brandContent.length - 2].value).toFixed(0) 
+                                        : '00'})
                                 </div>
                             </div>
                             
-                            {/* Rectangle 3: Status */}
-                            <div className="categoryStatusRect">
-                                <div className="categorySubtitle">
-                                    Status: {category.status}
+                            {/* Rectangle 3: Trend */}
+                            <div className="categoryScoreRect">
+                                <div className={`categoryScore ${category.status}`}>
+                                    {category.chartData.brandContent && category.chartData.brandContent.length > 0 
+                                        ? category.chartData.brandContent[category.chartData.brandContent.length - 1].value 
+                                        : '00'}
                                 </div>
-                                <div className={`statusIndicator ${category.status}`}></div>
+                                <div className="categoryTrendIndicator">
+                                    ▲ {category.chartData.brandContent && category.chartData.brandContent.length > 1 ? 
+                                        ((category.chartData.brandContent[category.chartData.brandContent.length - 1].value - 
+                                          category.chartData.brandContent[category.chartData.brandContent.length - 2].value) / 
+                                          category.chartData.brandContent[category.chartData.brandContent.length - 2].value * 100).toFixed(1) 
+                                        : '0.0'}% ({category.chartData.brandContent && category.chartData.brandContent.length > 1 ? 
+                                        (category.chartData.brandContent[category.chartData.brandContent.length - 1].value - 
+                                          category.chartData.brandContent[category.chartData.brandContent.length - 2].value).toFixed(0) 
+                                        : '00'})
+                                </div>
                             </div>
                         </div>
                     ))}
