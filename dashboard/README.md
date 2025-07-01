@@ -43,9 +43,7 @@ npm run build
 ## Usage
 
 1. **Navigate Categories** - Click category cards to view specific data
-2. **Search** - Use search bars to filter SKUs and categories
-3. **View Charts** - Click chart icons (📊) on individual SKUs for detailed trends
-4. **Export Data** - Use export button (⬇️) to download data
+2. **View Charts** - Click chart icons (📊) on individual SKUs for detailed trends
 
 ## Project Structure
 
