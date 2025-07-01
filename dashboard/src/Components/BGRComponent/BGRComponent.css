@@ -194,6 +194,15 @@
   box-shadow: 0 0 0 2px rgb(59 130 246 / 0.2), 0 4px 6px -1px rgb(0 0 0 / 0.1);
 }
 
+/* Non-selected cards should be grayed out */
+.bgrCategoryCard:not(.selected) {
+  opacity: 0.6;
+}
+
+.bgrCategoryCard:not(.selected):hover {
+  opacity: 0.8;
+}
+
 /* Rectangle 1: Category Name */
 .categoryHeaderRect {
   background-color: #3b82f6;
@@ -227,6 +236,7 @@
   margin: 0;
   line-height: 1;
   margin-bottom: 0.5rem;
+  color: #1f2937 !important;
 }
 
 .categorySubtitle {
@@ -253,17 +263,7 @@
   line-height: 1.4;
 }
 
-.categoryScore.success {
-  color: #059669;
-}
-
-.categoryScore.error {
-  color: #dc2626;
-}
-
-.categoryScore.warning {
-  color: #d97706;
-}
+/* Remove color variations - all scores should be black */
 
 .statusIndicator {
   width: 0.75rem;

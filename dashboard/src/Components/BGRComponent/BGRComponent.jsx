@@ -38,17 +38,13 @@ const BGRComponent = ({ categories, contentScore, assortmentScore, selectedCateg
                     <div className="bgrScoreCards">
                         <div className="bgrScoreCardContainer">
                             <div className="bgrScoreCard">
-                                <div className="scoreLabel">Content Score</div>
-                                <div className="scoreValue">{contentScore}</div>
-                                <div className="scoreSubtext">Current</div>
+                                <div className="scoreLabel">Content <br /> Score</div>
                             </div>
                         </div>
 
                         <div className="bgrScoreCardContainer">
                             <div className="bgrScoreCard">
                                 <div className="scoreLabel">Assortment</div>
-                                <div className="scoreValue">{assortmentScore}</div>
-                                <div className="scoreSubtext">Total</div>
                             </div>
                         </div>
                     </div>
