@@ -18,7 +18,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.05);
+    border: 1px solid #f3f4f6;
   }
   
   .dashboardTitle {
@@ -69,12 +73,20 @@
     opacity: 1;
   }
   
+  /* Charts Container */
+  .chartsContainer {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
   /* Overview Charts Grid */
   .overviewGrid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    margin-bottom: 1rem;
   }
   
   @media (min-width: 1024px) {

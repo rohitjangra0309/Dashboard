@@ -5,7 +5,8 @@ import infoIcon from '../../assets/infoIcon.svg'
 
 const Charts = ({ brandContentData, assessmentData, selectedCategoryName }) => {
     return (
-        <div>        {/* Header */}
+        <div className="chartsContainer">
+            {/* Header */}
             <div className="dashboardHeader">
                 <h1 className="dashboardTitle">
                     Overview for <span className="categoryNameTag">{selectedCategoryName}</span>
