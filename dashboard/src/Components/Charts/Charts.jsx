@@ -36,7 +36,7 @@ const Charts = ({ brandContentData, assessmentData, selectedCategoryName }) => {
                     </p>
                     <div className="chartContainer">
                         <ResponsiveContainer width="100%" height="100%">
-                            <AreaChart data={brandContentData}>
+                            <AreaChart data={brandContentData} margin={{ left: 5, right: 5, top: 5, bottom: 5 }}>
                                 <defs>
                                     <linearGradient id="blueGradient" x1="0" y1="0" x2="0" y2="1">
                                         <stop offset="0%" stopColor="#60a5fa" stopOpacity={0.3} />
@@ -93,11 +93,11 @@ const Charts = ({ brandContentData, assessmentData, selectedCategoryName }) => {
                     </p>
                     <div className="chartContainer">
                         <ResponsiveContainer width="100%" height="100%">
-                            <AreaChart data={assessmentData}>
+                            <AreaChart data={assessmentData} margin={{ left: 5, right: 5, top: 5, bottom: 5 }}>
                                 <defs>
-                                    <linearGradient id="greenGradient" x1="0" y1="0" x2="0" y2="1">
-                                        <stop offset="0%" stopColor="#34d399" stopOpacity={0.3} />
-                                        <stop offset="100%" stopColor="#34d399" stopOpacity={0.05} />
+                                    <linearGradient id="blueGradient2" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0%" stopColor="#60a5fa" stopOpacity={0.3} />
+                                        <stop offset="100%" stopColor="#60a5fa" stopOpacity={0.05} />
                                     </linearGradient>
                                 </defs>
                                 <XAxis
@@ -123,10 +123,10 @@ const Charts = ({ brandContentData, assessmentData, selectedCategoryName }) => {
                                 <Area
                                     type="monotone"
                                     dataKey="value"
-                                    stroke="#34d399"
+                                    stroke="#60a5fa"
                                     strokeWidth={2}
-                                    fill="url(#greenGradient)"
-                                    dot={{ fill: 'white', stroke: '#34d399', strokeWidth: 2, r: 4 }}
+                                    fill="url(#blueGradient2)"
+                                    dot={{ fill: 'white', stroke: '#60a5fa', strokeWidth: 2, r: 4 }}
                                 />
                             </AreaChart>
                         </ResponsiveContainer>
