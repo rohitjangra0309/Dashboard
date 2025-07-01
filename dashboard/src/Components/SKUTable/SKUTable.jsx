@@ -66,9 +66,7 @@ const SKUTable = ({ skuData }) => {
             {/* Header with Title and Action */}
             <div className="skuTableHeader">
                 <h2 className="skuTableTitle">SKUs - {selectedCategoryName}</h2>
-                <div className="skuTableActions">
-                    <button className="exportButton">📊 Export</button>
-                </div>
+                
             </div>
 
             {/* Tabs and Search in same container */}
@@ -91,15 +89,19 @@ const SKUTable = ({ skuData }) => {
 
                 {/* Search on right */}
                 <div className="skuSearchContainer">
-                    <input
-                        type="text"
-                        placeholder="Search"
-                        value={searchTerm}
-                        onChange={(e) => setSearchTerm(e.target.value)}
-                        className="skuSearchInput"
-                    />
-                    <button className="skuSearchButton">🔍</button>
-                    <button className="skuFilterButton">⚙️</button>
+                    <div className="skuSearchInputWrapper">
+                        <input
+                            type="text"
+                            placeholder="Search..."
+                            value={searchTerm}
+                            onChange={(e) => setSearchTerm(e.target.value)}
+                            className="skuSearchInput"
+                        />
+                        <span className="skuSearchIcon">🔍</span>
+                    </div>
+                    <div className="skuTableActions">
+                    <button className="exportButton">⬇️</button>
+                </div>
                 </div>
             </div>
 

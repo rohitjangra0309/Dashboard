@@ -18,7 +18,7 @@ const ChartModal = ({ isOpen, onClose, skuName, chartData }) => {
         <div className="modal-overlay" onClick={onClose}>
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>
                 <div className="modal-header">
-                    <h3 className="modal-title">Performance Trends - {skuName}</h3>
+                    <h3 className="modal-title">Trends for {skuName}</h3>
                     <button className="modal-close" onClick={onClose}>×</button>
                 </div>
                 
@@ -52,14 +52,6 @@ const ChartModal = ({ isOpen, onClose, skuName, chartData }) => {
                                     dot={{ fill: '#3b82f6', strokeWidth: 2, r: 4 }}
                                     name="Content Score"
                                 />
-                                <Line 
-                                    type="monotone" 
-                                    dataKey="titleCoverage" 
-                                    stroke="#10b981" 
-                                    strokeWidth={2}
-                                    dot={{ fill: '#10b981', strokeWidth: 2, r: 4 }}
-                                    name="Title Coverage"
-                                />
                             </LineChart>
                         </ResponsiveContainer>
                     </div>
@@ -68,10 +60,6 @@ const ChartModal = ({ isOpen, onClose, skuName, chartData }) => {
                         <div className="legend-item">
                             <div className="legend-color" style={{ backgroundColor: '#3b82f6' }}></div>
                             <span>Content Score</span>
-                        </div>
-                        <div className="legend-item">
-                            <div className="legend-color" style={{ backgroundColor: '#10b981' }}></div>
-                            <span>Title Coverage</span>
                         </div>
                     </div>
                 </div>
