@@ -8,12 +8,14 @@ const BGRComponent = ({ categories, contentScore, assortmentScore, selectedCateg
             <div className="bgrTopHeader">
                 <h2 className="bgrTitle">BGR</h2>
                 <div className="bgrSearchContainer">
-                    <input 
-                        type="text" 
-                        placeholder="Search..." 
-                        className="bgrSearchInput"
-                    />
-                    <button className="bgrSearchButton">🔍</button>
+                    <div className="bgrSearchInputWrapper">
+                        <input 
+                            type="text" 
+                            placeholder="Search..." 
+                            className="bgrSearchInput"
+                        />
+                        <span className="bgrSearchIcon">🔍</span>
+                    </div>
                 </div>
             </div>
 
@@ -22,26 +24,32 @@ const BGRComponent = ({ categories, contentScore, assortmentScore, selectedCateg
                 {/* Left Side - Hamburger Menu and Score Cards */}
                 <div className="bgrLeftContent">
                     {/* Hamburger Menu */}
-                    <div className="bgrHamburgerMenu">
-                        <button className="hamburgerButton">
-                            <div className="hamburgerLine"></div>
-                            <div className="hamburgerLine"></div>
-                            <div className="hamburgerLine"></div>
-                        </button>
+                    <div className="bgrHamburgerContainer">
+                        <div className="bgrHamburgerMenu">
+                            <button className="hamburgerButton">
+                                <div className="hamburgerLine"></div>
+                                <div className="hamburgerLine"></div>
+                                <div className="hamburgerLine"></div>
+                            </button>
+                        </div>
                     </div>
 
                     {/* Score Cards */}
                     <div className="bgrScoreCards">
-                        <div className="bgrScoreCard">
-                            <div className="scoreLabel">Content Score</div>
-                            <div className="scoreValue">{contentScore}</div>
-                            <div className="scoreSubtext">Current</div>
+                        <div className="bgrScoreCardContainer">
+                            <div className="bgrScoreCard">
+                                <div className="scoreLabel">Content Score</div>
+                                <div className="scoreValue">{contentScore}</div>
+                                <div className="scoreSubtext">Current</div>
+                            </div>
                         </div>
 
-                        <div className="bgrScoreCard">
-                            <div className="scoreLabel">Assortment</div>
-                            <div className="scoreValue">{assortmentScore}</div>
-                            <div className="scoreSubtext">Total</div>
+                        <div className="bgrScoreCardContainer">
+                            <div className="bgrScoreCard">
+                                <div className="scoreLabel">Assortment</div>
+                                <div className="scoreValue">{assortmentScore}</div>
+                                <div className="scoreSubtext">Total</div>
+                            </div>
                         </div>
                     </div>
                 </div>
